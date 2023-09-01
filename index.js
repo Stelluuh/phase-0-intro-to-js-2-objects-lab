@@ -4,14 +4,20 @@ const employee = {
     streetAddress: "123 my address"
 }
 
-function updateEmployeeWithKeyAndValue(obj, key, value) {
+function updateEmployeeWithKeyAndValue(employeeObj, key, value) {
     return {
-        ...obj,
+        ...employeeObj,
         [key]: value
     }
 }
 
-function destructivelyUpdateEmployeeWithKeyAndValue(employee, key, value) {
-        employee[key] = value
-        return employee
+function destructivelyUpdateEmployeeWithKeyAndValue(employeeObj, key, value) {
+        employeeObj[key] = value //Bracket Notation
+        return employeeObj
+}
+
+function deleteFromEmployeeByKey(employeeObj, key){
+    const copyOfEmployee = {...employeeObj}
+    delete copyOfEmployee.key //Dot notation
+    return copyOfEmployee
 }
