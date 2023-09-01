@@ -12,7 +12,7 @@ function updateEmployeeWithKeyAndValue(employeeObj, key, value) {
 }
 
 function destructivelyUpdateEmployeeWithKeyAndValue(employeeObj, key, value) {
-        employeeObj[key] = value //Bracket Notation
+        employeeObj[key] = value 
         return employeeObj
 }
 
