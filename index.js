@@ -18,6 +18,11 @@ function destructivelyUpdateEmployeeWithKeyAndValue(employeeObj, key, value) {
 
 function deleteFromEmployeeByKey(employeeObj, key){
     const copyOfEmployee = {...employeeObj}
-    delete copyOfEmployee.key //Dot notation
+    delete copyOfEmployee[key]
     return copyOfEmployee
+}
+
+function destructivelyDeleteFromEmployeeByKey(employeeObj, key){
+    delete employeeObj[key]
+    return employeeObj
 }
